@@ -1,6 +1,5 @@
 <template>
-<div>
-  <div class="reginstyle">전국확진자수</div>
+  <div class="reginstyle">전국확진자수
   <div class="d3 ">
     </div>
 </div>
@@ -53,11 +52,12 @@ export default {
 <style>
 .d3{
   background:white; 
-  width: 470px; 
-  height: 670px;
-  margin-left: 2%;
+  width: 480px; 
+  height: 660px;
   border:1px solid rgb(165, 164, 164);
   border-radius:20px;
+  margin-left: 18%;
+  
   /* margin-top: 0%; */
   
   /* margin: 0 auto; 
@@ -72,9 +72,11 @@ export default {
     font-size: 25px;
     font-family: sans-serif;
     font-weight: bold;
-    margin-left: 13%;
     color: white;
-    /* margin-top: 2%; */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
+    /* margin-left: 10%; */
   }
   /* .round{
   border:1px solid rgb(165, 164, 164);

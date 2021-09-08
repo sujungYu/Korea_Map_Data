@@ -1,13 +1,11 @@
 <template>
-  <div>
+  <div >
   <div class="text">
    <h1 class="textstyle ">C O R O N A 1 9</h1>
    <!-- <span class="datestyle">{{$moment().format('YYYY. MM. DD')}}</span> -->
-  </div>
-  <div class="haha">
+  <div class="back">
     <Home/>
   </div>
-  <div >
   </div>
   </div>
 </template>
@@ -18,7 +16,8 @@ export default {
   name: 'App',
   components: {
     Home
-  }
+  },
+   
 }
 </script>
 
@@ -26,11 +25,12 @@ export default {
 
 .textstyle{
   font-size: 70px;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   background-color: rgb(145, 144, 144);
-  padding: 20px 20px;
+  padding: 10px 10px;
   color: white;
-  font-family: fantasy
+  font-family: fantasy;
+  text-align: center
   
 }
 .datestyle{
@@ -39,12 +39,14 @@ export default {
 }
 .text{
   font-weight: bold;
-  text-align: center;
   
 }
-.haha{
+.back{
    border-radius:20px;
    background-color: rgb(165, 164, 164);
+   width: 100%;
+   height: 150%
 }
+
 
 </style>

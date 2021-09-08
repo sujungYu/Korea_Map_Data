@@ -1,19 +1,22 @@
 <template>
+<!-- <div class = "graphtextstyle">전체 누적 확진자 추이 -->
     <div class="row mt-5 graphstyle" v-if="arrdecideCnt.length>0">
-      <div class="col">
-        <h2>arrdecideCnt</h2>
-        <line-chart :width="10" :height="10" :chartData="arrdecideCnt" :options="chartOptions" label="arrdecideCnt"></line-chart>
-      </div>
+      <!-- <div class="col"> -->
+        <line-chart :width="170" :height="60" :chartData="arrdecideCnt" :options="chartOptions" ></line-chart>
+      <!-- </div> -->
     </div>
+    <!-- </div> -->
 </template>
 
 <script>
+import {Line} from 'vue-chartjs'
 import axios from 'axios'
 import moment from 'moment'
 
 import LineChart from './LineChart.vue'
 
 export default {
+  extends: Line,
   components:{
     LineChart
   },
@@ -22,9 +25,54 @@ export default {
     return {
       arrdecideCnt:[],
       chartOptions:{
+        title:{
+          display: true,
+          text:'전체 누적 확진자 추이',
+          fontSize: 25,
+          fontFamily: 'sans-serif',
+          fontStyle: 'bold'
+
+          // fontColor: white;
+          // margin-top: 1%;
+          /* margin-bottom: 2%; */
+          // text-align: center;
+        },
         responsive: true,
-        mainTainAspecRatio: false
-        
+        mainTainAspecRatio: false,
+        legend:{
+          display: false,
+        },
+
+        tooltips:{ 
+          enabled: true,
+        },
+        hover:{
+          animationDuration: 0
+        },
+        animation:{
+          duration:1,
+        },
+
+        scales:{
+           yAxes:[{
+            // display: false,
+            gridLines:{
+              display:true,
+              brawBorder:false
+            }
+          }],
+          xAxes:[{
+            ticks:{
+              fontSize:12,
+            },
+
+          gridLines:{
+            display:false,
+            drawBorder:false
+          }
+          }],
+          
+        }
       }
     };
   },
@@ -55,6 +103,21 @@ export default {
 .graphstyle{
     border-radius:20px;
     background-color: white;
+    border:1px solid white;
+    height: 290px;
+    margin-left: 50%;
+  
 }
+/* .graphtextstyle{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
+} */
+
+
 
 </style>

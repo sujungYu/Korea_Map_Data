@@ -4,6 +4,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vueMoment from 'vue-moment' 
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.css'
+import router from "./router.js"
 
 
 Vue.use(vueMoment)
@@ -18,4 +19,5 @@ Vue.prototype.$http = axios
 
 new Vue({
   render: h => h(App),
+  router
 }).$mount('#app')

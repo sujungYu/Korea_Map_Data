@@ -2,10 +2,13 @@
   <div>
     <div class = "left">
       <Map/>
+      
     </div>
      <div class = "right">
       <Graph/>
     </div>
+    <!-- <button class="btn" type="button" @click="seoul">서울</button>
+    <router-view></router-view> -->
   </div>
 </template>
 
@@ -18,7 +21,11 @@ export default {
     Graph,
     Map,
   },
-   
+  //  methods: {
+  //   seoul(){
+  //     this.$router.push('Seoul')
+  //   }
+  // },
 }
 </script>
 
@@ -43,10 +50,10 @@ div {
         /* box-sizing: border-box; */
         
     }
-    button.btn {
+    /* button.btn {
   position: absolute;
   top: 170px;
   left : 35px; 
-}
+} */
     
 </style>

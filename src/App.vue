@@ -1,11 +1,13 @@
 <template>
-  <div >
+  <div id = "app">
+    <!-- <router-view></router-view> -->
   <div class="text">
    <h1 class="textstyle ">C O R O N A 1 9</h1>
    <!-- <span class="datestyle">{{$moment().format('YYYY. MM. DD')}}</span> -->
   <div class="back">
     <Home/>
   </div>
+  
   </div>
   </div>
 </template>

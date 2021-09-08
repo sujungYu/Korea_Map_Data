@@ -1,9 +1,7 @@
 <template>
-  <div class="reginstyle">전국확진자수
-  <div class="d3 ">
-    </div>
-</div>
-    
+  <div class="hello"> 
+    <div class="d3"></div>
+  </div>
 </template>
 
 <script>
@@ -16,15 +14,15 @@ export default {
     // },
     mounted() {
       this.draw();
-      
     },
     methods: {
       draw() {
-        const koreaMap = require('../assets/korea.json'); 
+        const koreaMap = require('../assets/incheon.json'); 
+        console.log(koreaMap);
         const geojson = topojson.feature(koreaMap, koreaMap.objects.skorea_provinces_2018_geo); 
         // const center = d3.geoCentroid(geojson);
-        const width = 500;
-        const height =650;
+        const width = 600;
+        const height = 1000;
         const svg = d3
           .select('.d3')
           .append('svg')

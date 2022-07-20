@@ -1,9 +1,7 @@
 <template>
-  <div class="reginstyle">전국확진자수
-  <div class="d3 ">
-    </div>
-</div>
-    
+  <div class="reginstyle">
+    <div class="d3 "></div>
+  </div>
 </template>
 
 <script>
@@ -11,17 +9,14 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson';
 export default {
     name: 'Map',
-    // props: {
-    //   msg: String
-    // },
     mounted() {
       this.draw();
-      
+
     },
     methods: {
       draw() {
-        const koreaMap = require('../assets/korea.json'); 
-        const geojson = topojson.feature(koreaMap, koreaMap.objects.skorea_provinces_2018_geo); 
+        const koreaMap = require('../assets/korea.json');
+        const geojson = topojson.feature(koreaMap, koreaMap.objects.skorea_provinces_2018_geo);
         // const center = d3.geoCentroid(geojson);
         const width = 500;
         const height =650;
@@ -40,7 +35,7 @@ export default {
         const xoffset = width / 2 - scale * (bounds[1][0] + bounds[0][0]) / 2 + 10;
         const yoffset = height / 2 - scale * (bounds[1][1] + bounds[0][1]) / 2 + 80;
         const offset = [xoffset, yoffset];
-        projection.scale(scale).translate(offset); 
+        projection.scale(scale).translate(offset);
         svg.append('g')
           .selectAll('path').data(geojson.features)
           .enter().append('path')
@@ -52,18 +47,12 @@ export default {
 </script>
 <style>
 .d3{
-  background:white; 
-  width: 480px; 
+  background:white;
+  width: 480px;
   height: 660px;
   border:1px solid rgb(165, 164, 164);
   border-radius:20px;
   margin-left: 18%;
-  
-  /* margin-top: 0%; */
-  
-  /* margin: 0 auto; 
-  margin-bottom: auto; */
-
 }
   path {
     fill:rgb(209, 60, 60);
@@ -77,13 +66,5 @@ export default {
     margin-top: 1%;
     margin-bottom: 2%;
     text-align: center;
-    /* margin-left: 10%; */
   }
-  /* .round{
-  border:1px solid rgb(165, 164, 164);
-  border-radius:20px;
-  margin-top: 0%;
-  margin-left: 1%;
-   */
-/* } */
 </style>

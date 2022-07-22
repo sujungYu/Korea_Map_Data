@@ -8,7 +8,7 @@ TopoJSON은 중복성을 제거하여 관련 기하학적 구조를 동일한 �
 따라서, TopoJSON은 GeoJSON에 비해 파일 사이즈가 작은 장점을 가지고 있습니다.
 
 
-### npm run serve 결과
+### 결과
 ![image](https://user-images.githubusercontent.com/87973617/180373270-7e336530-55f1-469e-b57c-900698b51540.png)
 
 
